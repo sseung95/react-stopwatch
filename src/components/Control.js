@@ -1,10 +1,12 @@
+import Button from './Button';
+
 const Control = (props) => {
   return (
     <>
-      <button onClick={props.onStart}>Start</button>
-      <button onClick={props.onStop}>Stop</button>
-      <button onClick={props.onReset}>Reset</button>
-      <button onClick={props.onLap}>lap</button>
+      <Button onClick={props.onStart}>Start</Button>
+      <Button onClick={props.onStop}>Stop</Button>
+      <Button onClick={props.onReset}>Reset</Button>
+      <Button onClick={props.onLap}>lap</Button>
     </>
   );
 };

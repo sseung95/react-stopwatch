@@ -1,8 +1,12 @@
+import styles from './Lap.module.css';
+
 const Lap = (props) => {
   return (
     <ul>
       {props.history.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li className={styles.lap} key={index}>
+          {item}
+        </li>
       ))}
     </ul>
   );

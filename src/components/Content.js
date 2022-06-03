@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import styles from './Content.module.css';
+
 const Content = (props) => {
   const [minute, setMinute] = useState(0);
   const [second, setSecond] = useState(0);
@@ -67,9 +69,9 @@ const Content = (props) => {
 
   return (
     <>
-      <h1>Stopwatch</h1>
-      <h2>Vanilla JavaScript Stopwatch</h2>
-      <p>
+      <h1 className={styles.heading}>Stopwatch</h1>
+      <h2 className={styles.heading}>Vanilla JavaScript Stopwatch</h2>
+      <p className={styles.time}>
         <span>{convertNumber(minute)}</span>:
         <span>{convertNumber(second)}</span>.
         <span>{convertNumber(milliSecond)}</span>

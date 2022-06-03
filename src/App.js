@@ -3,6 +3,8 @@ import Content from './components/Content';
 import Control from './components/Control';
 import Lap from './components/Lap';
 
+import styles from './App.module.css';
+
 function App() {
   const [isStart, setIsStart] = useState(false);
   const [isReset, setIsReset] = useState(false);
@@ -31,12 +33,12 @@ function App() {
   };
 
   const addHistory = (time) => {
-    setHistory((prevLap) => [...prevLap, time]);
+    setHistory((prevLap) => [time, ...prevLap]);
     setIsLap(false);
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Content
         isStart={isStart}
         isReset={isReset}
